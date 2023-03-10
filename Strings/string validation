@@ -1,0 +1,52 @@
+str.islower()
+This method checks if all the characters of a string are lowercase characters (a-z).
+
+>>> print 'abcd123#'.islower()
+True
+>>> print 'Abcd123#'.islower()
+False
+str.isupper()
+This method checks if all the characters of a string are uppercase characters (A-Z).
+
+>>> print 'ABCD123#'.isupper()
+True
+>>> print 'Abcd123#'.isupper()
+False
+Task
+
+You are given a string .
+Your task is to find out if the string  contains: alphanumeric characters, alphabetical characters, digits, lowercase and uppercase characters.
+
+Input Format
+
+A single line containing a string .
+
+Constraints
+natural number less than 1000
+Output Format
+
+In the first line, print True if  has any alphanumeric characters. Otherwise, print False.
+In the second line, print True if  has any alphabetical characters. Otherwise, print False.
+In the third line, print True if  has any digits. Otherwise, print False.
+In the fourth line, print True if  has any lowercase characters. Otherwise, print False.
+In the fifth line, print True if  has any uppercase characters. Otherwise, print False.
+
+Sample Input
+
+qA2
+Sample Output
+
+True
+True
+True
+True
+True
+
+Solution:
+if __name__ == '__main__':
+    string = input()
+    print(any(c.isalnum() for c in string))
+    print(any(c.isalpha() for c in string))
+    print(any(c.isdigit() for c in string))
+    print(any(c.islower() for c in string))
+    print(any(c.isupper() for c in string))
